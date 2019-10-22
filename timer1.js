@@ -9,7 +9,7 @@ for (const num of argv) {
       }, 0);
   }
 
-  if(num !== Number) {
+  if(!Number(num)) {
     setTimeout(() => {  
       process.stdout.write(`no numbers provided.\n`);
       }, 0);
@@ -17,7 +17,7 @@ for (const num of argv) {
 
   if(num <= 0) {
     setTimeout(() => {  
-      process.stdout.write(`${num} seconds\n`);
+      process.stdout.write(`${num} seconds is not a valid number\n`);
       }, num * 1000);
   }
 
