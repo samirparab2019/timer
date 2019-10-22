@@ -17,13 +17,13 @@ for (const num of argv) {
 
   if(num <= 0) {
     setTimeout(() => {  
-      process.stdout.write(`${num} seconds is not a valid number\n`);
+      process.stdout.write(`${num} seconds\n`);
       }, num * 1000);
   }
 
   if(num > 0) {
     setTimeout(() => {  
-      process.stdout.write(`${num} seconds is not an option\n`);
+      process.stdout.write(`${num} seconds\n`);
       process.stdout.write('\x07');
     }, num * 1000);
   }
